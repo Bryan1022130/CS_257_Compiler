@@ -1,0 +1,9 @@
+FAIL: cfold_add — metadata-only differences (module flags/metadata/attributes)
+FAIL: cfold_mul — metadata-only differences (module flags/metadata/attributes)
+FAIL: cfold_sub — metadata-only differences (module flags/metadata/attributes)
+FAIL: p2_common_subexpr — metadata-only differences (module flags/metadata/attributes)
+NO GOLD: p2_common_subexpr_opt
+FAIL: p3_const_prop — functional or IR-structure change
+FAIL: p4_const_prop — functional or IR-structure change
+---
+Total: 7, PASS: 0, FAIL: 6, NO_GOLD: 1
