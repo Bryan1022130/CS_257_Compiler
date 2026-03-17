@@ -1,11 +1,10 @@
+#include "semantic.h"
+
 #include <cstdio>
 #include <string>
 #include <vector>
 #include <unordered_set>
 
-#include "../ast/ast.h"
-
-// A stack of symbol tables (each scope is a set of variable names)
 static std::vector<std::unordered_set<std::string>> scopeStack;
 static int hadError = 0;
 

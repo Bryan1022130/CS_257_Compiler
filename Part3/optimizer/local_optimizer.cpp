@@ -25,7 +25,6 @@
 //   ./optimizer ../opt_tests/cfold_add.ll > /tmp/out.ll
 //   diff -u ../optimizer_test_results/cfold_add_opt.ll /tmp/out.ll
 //
-// NOTE:also normalize ModuleID so it matches the gold files’ style.
 
 #include <llvm-c/Core.h>
 #include <llvm-c/IRReader.h>
@@ -338,7 +337,7 @@ static bool deadCodeElimInFunction(LLVMValueRef F) {
       }
     }
 
-    // Ifdidn’t delete anything this round,reached a fixpoint.
+    // If didn’t delete anything this round,reached a fixpoint.
     if (!changedThisRound) break;
   }
 
@@ -349,7 +348,7 @@ static bool deadCodeElimInFunction(LLVMValueRef F) {
 //
 //run local optimizations to a fixpoint for each function:
 //
-// Suggested order:
+//  order:
 //   1) Constant folding (creates more constants)
 //   2) CSE (reuses equivalent computations)
 //   3) DCE (removes unused leftovers)
